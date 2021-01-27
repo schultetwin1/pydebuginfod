@@ -1,1 +1,4 @@
+# Python Files
 /dist
+.pytest_cache
+*.pyc
