@@ -3,7 +3,7 @@ import pydebuginfod
 
 
 def test_version():
-    assert pydebuginfod.__version__ == '0.1.0'
+    assert pydebuginfod.__version__ == '0.0.1'
 
 
 def test_download_ls():
