@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.6"
 requests = "^2.25.1"
 xdg = "^5.0.1"
+bison = "^0.1.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

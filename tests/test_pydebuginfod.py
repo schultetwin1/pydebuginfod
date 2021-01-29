@@ -7,11 +7,12 @@ def test_version():
 
 
 def test_download_ls():
-    pydebuginfod.clear_cache()
+    client = pydebuginfod.Client()
     buildid = "c0e8c127f1f36dd10e77331f46b6e2dbbbdb219b"
-    cached_path = pydebuginfod.get_debuginfo(buildid)
+    client.clear_cache()
+    cached_path = client.get_debuginfo(buildid)
     expected_path = os.path.join(
-        pydebuginfod.cache_dir(),
+        client.cache,
         'buildid',
         buildid,
         'debuginfo')
