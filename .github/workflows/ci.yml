@@ -26,4 +26,4 @@ jobs:
         poetry build
     - name: Test with pytest
       run: |
-        pytest
+        poetry run pytest
