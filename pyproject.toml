@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pydebuginfod"
-version = "0.0.1"
+version = "0.1.0"
 license = "MIT"
 description = "A python client for the debuginfod server"
 authors = ["Matt Schulte <schultetwin1@gmail.com>"]
