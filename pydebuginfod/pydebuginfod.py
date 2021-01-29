@@ -6,6 +6,7 @@ import shutil
 import sys
 import tempfile
 from urllib.parse import urljoin, quote
+import xdg
 
 verbose = os.getenv("DEBUGINFOD_VERBOSE") is not None
 if verbose:
@@ -84,7 +85,7 @@ def cache_dir():
     if env_cache_dir is not None:
         return env_cache_dir
     else:
-        return os.path.join(os.environ['HOME'], '.cache', 'debuginfod')
+        return os.path.join(str(xdg.xdg_cache_home()), 'debuginfod')
 
 
 def servers():
