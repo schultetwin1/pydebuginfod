@@ -3,6 +3,9 @@
 pydebuginfod is a Python client implementation of the [debuginfod
 spec](https://www.mankier.com/8/debuginfod).
 
+![PyPI](https://img.shields.io/pypi/v/pydebuginfod)
+![Build](https://github.com/schultetwin1/pydebuginfod/workflows/CI/badge.svg)
+
 ```python
 import pydebuginfod
 
