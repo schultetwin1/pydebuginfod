@@ -9,8 +9,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.6"
 requests = "^2.25.1"
-xdg = "^5.0.1"
 bison = "^0.1.2"
+toml = "^0.10.2"
+xdgappdirs = "^1.4.5"
+boto3 = "^1.17.22"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
