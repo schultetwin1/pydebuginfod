@@ -35,7 +35,10 @@ class Client:
             self.timeout = None
         self.progress = config.get('progress')
         self.cache = config.get('cache-path')
-        self.servers = symbols_config["servers"]
+        if symbols_config is not None:
+            self.servers = symbols_config["servers"]
+        else:
+            self.servers = []
         urls = config.get('urls')
         for url in urls:
             self.servers.append({
@@ -127,8 +130,11 @@ class Client:
 
 def read_symbols_config():
     config_file = Path(symbols_dirs.user_config_dir).joinpath("symbols.toml")
-    symbols_config = toml.load(config_file)
-    return symbols_config
+    if config_file.exists():
+        symbols_config = toml.load(config_file)
+        return symbols_config
+    else:
+        return None
 
 
 def read_config():
